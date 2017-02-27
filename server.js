@@ -42,13 +42,19 @@ app.get('/', (req, res) => {
   });
 });
 
-app.get('/about/foo', (req, res) => {
-  res.send('About Foo page');
-});
+// app.get('/about/foo', (req, res) => {
+//   res.send('About Foo page');
+// });
 
 app.get('/about', (req, res) => {
   res.render('about.hbs', {
     pageTitle: 'About rendered page'
+  });
+});
+
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Projects page'
   });
 });
 
